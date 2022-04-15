@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { map, tap } from 'rxjs';
+import { Place } from './../places/place.model';
 
 @Component({
   selector: 'app-bookings',
@@ -7,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingsPage implements OnInit {
 
-  constructor() { }
+
+  constructor() {
+   }
 
   ngOnInit() {
   }

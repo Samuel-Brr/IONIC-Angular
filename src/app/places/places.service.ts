@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable max-len */
 import { Injectable } from '@angular/core';
 import { Place } from './place.model';
@@ -36,6 +37,10 @@ export class PlacesService {
   get places() {
     // eslint-disable-next-line no-underscore-dangle
     return [...this._places];
+  }
+
+  getPlace(id: string){
+    return {...this._places.find( p => p.id === id )};
   }
 
 }
