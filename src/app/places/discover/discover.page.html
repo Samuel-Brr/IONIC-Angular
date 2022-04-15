@@ -22,7 +22,7 @@
               fill="clear"
               color="primary"
               routerDirection="forward"
-              routerLink="loadedPlaces[0].id"
+              [routerLink]="loadedPlaces[0].id"
             >
               More
             </ion-button>
@@ -33,7 +33,7 @@
     <ion-row>
       <ion-col size="12" size-sm="8" offsetSm="2" class="ion-text-center">
         <ion-list>
-          <ion-item *ngFor="let place of loadedPlaces.slice(1)" detail routerLink="place.id">
+          <ion-item *ngFor="let place of loadedPlaces.slice(1)" detail [routerLink]="place.id">
             <ion-thumbnail slot="start">
               <img [src]="place.imageUrl" />
             </ion-thumbnail>
